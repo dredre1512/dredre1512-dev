@@ -4,7 +4,7 @@
 			<h1>Hello I am Andre Villalon</h1>
 		</div>
 		<div class="card my-3 p-3">
-			<h3>These are my projects</h3>
+			<h3>Programming Finals API</h3>
 			<div class="accordion" id="accordionExample">
 				<div class="accordion-item">
 					<h2 class="accordion-header" id="headingOne">
