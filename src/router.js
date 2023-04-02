@@ -9,6 +9,7 @@ const routes = [
   { path: '/quotes', component: async () => await import('./Pages/RandomQuotes.vue') },
   { path: '/ted-talk', component: async () => await import('./Pages/TedTalk.vue') },
   { path: '/', component: async () => await import('./Pages/Home.vue') },
+  { path: '/numbers', component: async () => await import('./Pages/Numbers.vue') },
 ]
 const router = createRouter({
   history: createWebHashHistory(),
