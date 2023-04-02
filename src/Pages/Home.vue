@@ -162,6 +162,40 @@
 						</div>
 					</div>
 				</div>
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="numEl">
+						<button
+							class="accordion-button collapsed"
+							type="button"
+							data-bs-toggle="collapse"
+							data-bs-target="#numAcc"
+							aria-expanded="false"
+							aria-controls="numAcc"
+						>
+							Numbers API
+						</button>
+					</h2>
+					<div
+						id="numAcc"
+						class="accordion-collapse collapse"
+						aria-labelledby="numEl"
+						data-bs-parent="#accordionExample"
+					>
+						<div class="accordion-body">
+							<p>
+								An API for interesting facts about numbers. Provides trivia,
+								math, date, and year facts about numbers.
+							</p>
+							<p>
+								For example, “5 is the number of platonic solids”, “42 is the
+								number of little squares forming the left side trail of
+								Microsoft’s Windows 98 logo”, “February 27th is the day in 1964
+								that the government of Italy asks for help to keep the Leaning
+								Tower of Pisa from toppling over”
+							</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
