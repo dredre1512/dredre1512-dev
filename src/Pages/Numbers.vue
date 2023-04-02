@@ -18,7 +18,9 @@
 				Get random number facts
 			</button>
 			<div class="text-center p-3">
-				<div class="col-12 col-sm-6 mx-auto card shadow p-3">{{ facts }}</div>
+				<div class="col-12 col-sm-6 mx-auto card shadow p-3">
+					{{ facts.number }} is {{ facts.text }}
+				</div>
 			</div>
 		</section>
 	</main>
@@ -26,15 +28,29 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import axios from "axios";
+import constants from "../constants.js";
 
 const num = ref("");
 const facts = ref("");
 const getRandomFacts = async () => {
+	const options = {
+		method: "GET",
+		params: { fragment: "true", json: "true" },
+		headers: {
+			"X-RapidAPI-Key": constants.NUMBERS_API_KEY,
+			"X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+		},
+	};
 	const findNum = num.value || Math.floor(Math.random() * 100);
-	axios.get("http://numbersapi.com/" + findNum).then(function (response) {
-		console.log(response);
-		facts.value = response.data;
-	});
+	options.url = "https://numbersapi.p.rapidapi.com/" + findNum + "/math";
+	axios
+		.request(options)
+		.then(function (response) {
+			facts.value = response.data;
+		})
+		.catch(function (error) {
+			console.error(error);
+		});
 };
 onMounted(async () => {
 	await getRandomFacts();
